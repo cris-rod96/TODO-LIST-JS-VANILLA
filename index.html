@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDO-List | Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="head-container">
+        <h1 class="title">ToDo-List</h1>
+        <div class="input-task-container">
+          <input type="hidden" id="input-id" />
+          <input type="text" name="" id="input-task" class="input-task" />
+          <div class="buttons-tasks">
+            <button class="btn btn-save" id="btn-save">Guardar</button>
+            <button class="btn btn-saveEdit" id="btn-saveEdit">
+              Guardar Edición
+            </button>
+          </div>
+        </div>
+
+        <div class="input-filter-container">
+          <span>Filtrar por: </span>
+          <select name="" id="filter-task" class="filter-task">
+            <option value="">Sin filtrar</option>
+            <option value="completed">Tareas completadas</option>
+            <option value="noCompleted">Tareas no completadas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tasks-container">
+        <div class="tasks" id="tasks"></div>
+
+        <div class="empty" id="empty">
+          <i class="fa-solid fa-heart-crack"></i>
+          <span>No se encontraron tareas</span>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

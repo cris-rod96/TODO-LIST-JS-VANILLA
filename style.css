@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 80%;
+  padding: 20px;
+  border: 2px solid lightgrey;
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px lightgray;
+
+  display: grid;
+  gap: 20px;
+}
+
+.head-container {
+  display: grid;
+  gap: 20px;
+}
+
+.head-container > .title {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(211, 204, 204);
+}
+
+.input-task-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.input-task-container > .input-task {
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  border: 1px solid rgb(233, 229, 229);
+  border-radius: 12px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: rgb(117, 115, 115);
+}
+
+.input-task:focus {
+  border-color: rgb(211, 204, 204);
+}
+
+.buttons-tasks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  height: 50px;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.btn-save {
+  background-color: rgb(28, 116, 28);
+  border: 1px solid rgb(28, 116, 28);
+  border-radius: 10px;
+}
+
+.btn-save:hover {
+  background-color: rgb(25, 75, 25);
+}
+.btn-save:disabled {
+  background-color: rgb(153, 150, 150);
+  border-color: rgb(153, 150, 150);
+}
+
+.btn-saveEdit {
+  background-color: rgb(51, 37, 37);
+  border: 1px solid rgb(51, 37, 37);
+  border-radius: 10px;
+}
+
+.btn-saveEdit:hover {
+  background-color: rgb(54, 47, 47);
+}
+
+.btn-saveEdit:disabled {
+  background-color: rgb(153, 150, 150);
+  border-color: rgb(153, 150, 150);
+}
+
+.input-filter-container {
+  width: 90%;
+  margin: 10px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-filter-container > span {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(54, 47, 47);
+}
+
+.input-filter-container > .filter-task {
+  height: 45px;
+  padding-left: 10px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+}
+
+.filter-task:focus {
+  border-color: rgb(136, 136, 136);
+}
+
+.filter-task > option {
+  font-size: 16px;
+}
+
+.tasks-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tasks {
+  display: grid;
+  gap: 10px;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: repeat(3, 10% 60% 30%);
+  align-items: center;
+  gap: 5px;
+}
+
+.input-check {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  height: 50px;
+}
+
+.btn-edit {
+  background-color: rgb(145, 145, 37);
+  border: 1px solid rgb(145, 145, 37);
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn-edit:hover {
+  background-color: rgb(90, 90, 16);
+}
+
+.btn-delete {
+  background-color: rgb(126, 32, 9);
+  border: 1px solid rgb(126, 32, 9);
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn-delete:hover {
+  background-color: rgb(88, 31, 17);
+}
+
+.empty {
+  width: 90%;
+  height: 200px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.empty > i {
+  font-size: 40px;
+  color: rgb(158, 43, 43);
+}
+
+.empty > span {
+  font-size: 24px;
+  color: lightgrey;
+}
+
+.hide {
+  display: none;
+}
+
+/* Media queries */
+@media (min-width: 1023px) {
+  .main-container {
+    max-width: 900px;
+  }
+  .input-task-container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 60% 40%);
+  }
+
+  .input-filter-container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 15% 85%);
+    align-items: center;
+  }
+}
