@@ -148,7 +148,9 @@ const loadListeners = () => {
       });
 
       if (findTask) {
-        alert("No puedes agregar esta tarea, esta tarea ya existe");
+        alert(
+          "No puedes agregar esta tarea, esta tarea ya existe. Por favor intenta con otra"
+        );
       } else {
         data.tasks = data.tasks.map((task) => {
           if (task.id_task === idTask) {
